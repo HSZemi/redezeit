@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Redezeit</title>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+		button.keyboard {
+			width: 34px;
+			height: 32px;
+		}
+		
+		#addform {
+			margin-top: 1em;
+		}
+		
+		#keylist {
+			margin-top: 1em;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1>Redezeit</h1>
+	<div id="keyrows" class="col-md-6">
+		<div class="col-md-12">
+			<button class="btn btn-default keyboard" value="q">Q</button>
+			<button class="btn btn-default keyboard" value="w">W</button>
+			<button class="btn btn-default keyboard" value="e">E</button>
+			<button class="btn btn-default keyboard" value="r">R</button>
+			<button class="btn btn-default keyboard" value="t">T</button>
+			<button class="btn btn-default keyboard" value="z">Z</button>
+			<button class="btn btn-default keyboard" value="u">U</button>
+			<button class="btn btn-default keyboard" value="i">I</button>
+			<button class="btn btn-default keyboard" value="o">O</button>
+			<button class="btn btn-default keyboard" value="p">P</button>
+		</div>
+		<div class="col-md-12">
+			<button class="btn btn-default keyboard" value="a">A</button>
+			<button class="btn btn-default keyboard" value="s">S</button>
+			<button class="btn btn-default keyboard" value="d">D</button>
+			<button class="btn btn-default keyboard" value="f">F</button>
+			<button class="btn btn-default keyboard" value="g">G</button>
+			<button class="btn btn-default keyboard" value="h">H</button>
+			<button class="btn btn-default keyboard" value="j">J</button>
+			<button class="btn btn-default keyboard" value="k">K</button>
+			<button class="btn btn-default keyboard" value="l">L</button>
+		</div>
+		<div class="col-md-12">
+			<button class="btn btn-default keyboard" value="y">Y</button>
+			<button class="btn btn-default keyboard" value="x">X</button>
+			<button class="btn btn-default keyboard" value="c">C</button>
+			<button class="btn btn-default keyboard" value="v">V</button>
+			<button class="btn btn-default keyboard" value="b">B</button>
+			<button class="btn btn-default keyboard" value="n">N</button>
+			<button class="btn btn-default keyboard" value="m">M</button>
+		</div>
+		
+		<div class="col-md-12">
+		<div class="form-inline" id="addform">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" id="name" placeholder="Kunibald">
+		</div>
+		<button id="add" class="btn btn-default">Hinzufügen</button>
+		</div>
+	</div>
+	</div>
+	<div class="col-md-6">
+	
+	
+	<div id="controls">
+		<button id="start" class="btn btn-lg btn-success"><strong>Start</strong></button>
+		<button id="reset" class="btn btn-lg btn-default">Reset</button>
+	</div>
+	</div>
+	
+	<div class="col-md-12">
+	<div id="keylist">
+	<table class="table" id="keytable">
+		<tr>
+			<th class="table_x"></th>
+			<th class="name">Name</th>
+			<th class="key">Taste</th>
+			<th class="seconds"># Sekunden</th>
+			<th class="percent">%</th>
+		</tr>
+	</table>
+	
+	</div>
+	
+	<div id="timeline"></div>
+	</div>
+</div>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/redezeit.js"></script>
+</body>
+</html>
