@@ -11,6 +11,12 @@ function resetKeyboard(){
 	$('.keyboard').removeClass("btn-primary");
 }
 
+function hardResetKeyboard(){
+	$('.keyboard').removeClass("btn-primary");
+	$('.keyboard').removeClass("btn-info");
+	$('.keyboard').prop('disabled', false);
+}
+
 function resetTable(){
 	$('tr').removeClass("info");
 }
@@ -117,7 +123,7 @@ function state2table(state){
 }
 
 function state2keyboard(state){
-	resetKeyboard();
+	hardResetKeyboard();
 	for(var k in state.registered_keys){
 		key = getKeyByChar(k);
 		if(key != undefined){
@@ -200,7 +206,7 @@ $().ready(function(){
 			$(this).addClass("btn-success");
 		} else {
 			$(document).keypress(function(event){
-				key = event.key;
+				key = String.fromCharCode(event.which);
 				if(key == " "){
 					key = "-";
 				}
